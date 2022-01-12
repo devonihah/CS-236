@@ -16,6 +16,7 @@ Book::Book(std::string title, std::string author) {
 
 void Book::setGenre(std::string genre) {
     this->genre = genre;
+    genreSet = true;
 }
 
 void Book::setPages(std::string pages) {
@@ -29,6 +30,7 @@ void Book::setPages(std::string pages) {
     catch (const std::invalid_argument& e) {
         throw "Page value must be a whole number.";
     }
+
     this->pages = numPages;
     pagesSet = true;
 }
@@ -44,6 +46,7 @@ void Book::setHours(std::string hours) {
     catch (const std::invalid_argument& e) {
         throw "Hour value must be a positive number.";
     }
+
     this->hours = numHours;
     hoursSet = true;
 }
