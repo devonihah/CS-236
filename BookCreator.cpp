@@ -114,4 +114,3 @@ void BookCreator::match(Info info, Info::InfoType infoType) {
 bool BookCreator::check(Info info, Info::InfoType infoType) {
     return info.getType() == infoType;
 }
-
